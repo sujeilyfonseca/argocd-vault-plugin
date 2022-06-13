@@ -12,3 +12,4 @@ If a version combination is missing from this table, **it is still very likely A
 | 1.20 (4.7) | 2.0.x | 1.x |
 | 1.21 (4.8) | 2.0.x | 1.x |
 | 1.21 (4.8) | 2.1.x | 1.x |
+| 1.23       | 2.4.0 | 1.x |
