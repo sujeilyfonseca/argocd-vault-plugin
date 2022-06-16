@@ -166,6 +166,15 @@ fDGt+yaf3RaZbVwHSVLzxiXGsu1WQJde3uJeNh5c6z+5
 			},
 			"*backends.OnePasswordConnect",
 		},
+		{
+			map[string]interface{}{
+				"ARGOCD_ENV_USE_PREFIX":       "true",
+				"ARGOCD_ENV_AVP_TYPE":         "vault",
+				"ARGOCD_ENV_AVP_AUTH_TYPE":    "github",
+				"ARGOCD_ENV_AVP_GITHUB_TOKEN": "token",
+			},
+			"*backends.Vault",
+		},
 	}
 	for _, tc := range testCases {
 		for k, v := range tc.environment {

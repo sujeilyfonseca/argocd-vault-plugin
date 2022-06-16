@@ -55,6 +55,12 @@ func New(v *viper.Viper, co *Options) (*Config, error) {
 	// Set Defaults
 	v.SetDefault(types.EnvAvpKvVersion, "2")
 
+	// Check if using ArgoCD Env Prefix for ArgoCD >=2.4.0
+	v.BindEnv(types.EnvUseArgoCDPrefix)
+	if v.GetBool(types.EnvUseArgoCDPrefix) {
+		v.SetEnvPrefix(types.EnvArgoCDPrefix)
+	}
+
 	// Read in config file or kubernetes secret and set as env vars
 	err := readConfigOrSecret(co.SecretName, co.ConfigPath, v)
 	if err != nil {
