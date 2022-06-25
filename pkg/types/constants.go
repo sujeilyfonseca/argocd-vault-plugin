@@ -2,7 +2,7 @@ package types
 
 const (
 	// Environment Variable Prefix
-	EnvArgoCDPrefix    = "ARGOCD_ENV"
+	EnvArgoCDPrefix    = "ARGOCD_ENV_"
 	EnvUseArgoCDPrefix = "ARGOCD_ENV_USE_PREFIX"
 
 	// Environment Variable Constants
